@@ -1,9 +1,9 @@
-import { TOPICS as JAVA_TOPICS, QUESTIONS as JAVA_QUESTIONS } from "../java-exam-quiz-site/questions.js";
-import { TOPICS as PY_TOPICS, QUESTIONS as PY_QUESTIONS } from "../python-exam-quiz-site/questions.js";
-import { TOPICS as SQL_TOPICS, QUESTIONS as SQL_QUESTIONS } from "../sql-exam-quiz-site/questions.js";
-import { TOPICS as GIT_TOPICS, QUESTIONS as GIT_QUESTIONS } from "../version-control-exam-quiz-site/questions.js";
-import { TOPICS as WEB_V2_TOPICS, QUESTIONS as WEB_V2_QUESTIONS } from "../web-exam-quiz-site/questions_v2.js";
-import { TOPICS as WEB_V1_TOPICS, QUESTIONS as WEB_V1_QUESTIONS } from "../web-exam-quiz-site/questions.js";
+import { TOPICS as JAVA_TOPICS, QUESTIONS as JAVA_QUESTIONS } from "./questions/java.questions.js";
+import { TOPICS as PY_TOPICS, QUESTIONS as PY_QUESTIONS } from "./questions/python.questions.js";
+import { TOPICS as SQL_TOPICS, QUESTIONS as SQL_QUESTIONS } from "./questions/sql.questions.js";
+import { TOPICS as GIT_TOPICS, QUESTIONS as GIT_QUESTIONS } from "./questions/git.questions.js";
+import { TOPICS as WEB_V2_TOPICS, QUESTIONS as WEB_V2_QUESTIONS } from "./questions/web_v2.questions.js";
+import { TOPICS as WEB_V1_TOPICS, QUESTIONS as WEB_V1_QUESTIONS } from "./questions/web_v1.questions.js";
 
 function normalizeQuestions(subjectKey, subjectLabel, topics, questions, sourceTag) {
   return questions.map((q, idx) => {
