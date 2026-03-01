@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מדריך למידה לקורס תכנות מתקדם</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>מדריך למידה לקורס תכנות מתקדם</h1>
+        <p>
+          אתר אחד לכל הנושאים: Git, Java, Python, SQL, Web.
+          ניתן לבחור נושא יחיד, כמה נושאים יחד, או את כל הנושאים.
+        </p>
+      </header>
+
+      <section class="panel" aria-labelledby="subjectsTitle">
+        <div class="panel-head">
+          <h2 id="subjectsTitle">בחירת נושאים</h2>
+          <div class="subject-actions">
+            <button id="selectAllBtn" type="button" class="btn ghost">בחר הכל</button>
+            <button id="clearAllBtn" type="button" class="btn ghost">נקה הכל</button>
+          </div>
+        </div>
+        <div id="subjectGrid" class="subject-grid"></div>
+        <p id="selectionInfo" class="selection-info"></p>
+      </section>
+
+      <section class="panel settings" aria-labelledby="settingsTitle">
+        <h2 id="settingsTitle">הגדרות סשן</h2>
+        <label class="inline-field">
+          <span>מספר שאלות</span>
+          <input id="countInput" type="number" min="1" value="40" />
+        </label>
+        <label class="inline-field checkbox-field">
+          <input id="shuffleInput" type="checkbox" checked />
+          <span>ערבוב שאלות</span>
+        </label>
+        <div class="actions">
+          <button id="startSelectedBtn" class="btn primary" type="button">התחל לפי בחירה</button>
+          <button id="startAllBtn" class="btn" type="button">התחל את כל הנושאים</button>
+        </div>
+      </section>
+
+      <section id="quizPanel" class="panel hidden" aria-live="polite">
+        <p id="progress" class="progress"></p>
+        <p id="meta" class="meta"></p>
+        <div id="question" class="question"></div>
+        <pre id="graph" class="graph hidden"></pre>
+        <div id="options" class="options"></div>
+        <div class="actions">
+          <button id="submitBtn" class="btn primary" type="button">בדוק תשובה</button>
+          <button id="nextBtn" class="btn" type="button" disabled>השאלה הבאה</button>
+        </div>
+        <p id="feedback" class="feedback"></p>
+      </section>
+
+      <section id="summaryPanel" class="panel hidden">
+        <h2>סיכום</h2>
+        <p id="score"></p>
+        <p id="covered"></p>
+        <div id="weak"></div>
+        <div class="actions">
+          <button id="restartBtn" class="btn primary" type="button">התחל סשן חדש</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
